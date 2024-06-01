@@ -1,0 +1,20 @@
+
+.env
+
+myvenv
+
+#for open ai api
+import openai
+from openai import OpenAI
+client = OpenAI()
+
+completion = client.chat.completions.create(
+  model="gpt-3.5-turbo",
+  messages=[
+    {"role": "system", "content":"You are a personal assistant who helps with daily tasks, helps code and design engineering projects, and answers any questions asked."},
+    {"role": "user", "content": "Write the code for a tic tac toe game in python."}
+  ]
+)
+
+print(completion.choices[0].message)
+
