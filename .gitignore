@@ -1,7 +1,5 @@
 
-.env
-
-myvenv
+.venv
 
 #for open ai api
 import openai
